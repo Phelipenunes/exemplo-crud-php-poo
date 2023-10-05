@@ -49,7 +49,7 @@ function inserirProduto(
     }
 }
 
- */
+ 
 function lerUmProduto(PDO $conexao, int $id):array {
     $sql = "SELECT * FROM produtos WHERE id = :id";
     try {
@@ -85,7 +85,7 @@ function atualizarProduto(PDO $conexao, int $id, string $nome, float $preco, int
         die("Erro ao atualizar: ".$erro->getMessage());
     }   
 }
-
+*/
 
 function excluirProduto(PDO $conexao, int $id):void {
     $sql = "DELETE FROM produtos WHERE id = :id";
