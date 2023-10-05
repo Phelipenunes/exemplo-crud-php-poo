@@ -1,7 +1,7 @@
 <?php
 require_once "conecta.php";
 
-function lerProdutos(PDO $conexao):array {
+/* function lerProdutos(PDO $conexao):array {
     $sql = "SELECT 
                 produtos.id,
                 produtos.nome AS produto,
@@ -22,10 +22,10 @@ function lerProdutos(PDO $conexao):array {
     }
     
     return $resultado;
-}
+} */
 
 
-
+/* 
 function inserirProduto(
     PDO $conexao, string $nome, float $preco, 
     int $quantidade, int $fabricanteId, string $descricao ):void {
@@ -49,7 +49,7 @@ function inserirProduto(
     }
 }
 
-
+ */
 function lerUmProduto(PDO $conexao, int $id):array {
     $sql = "SELECT * FROM produtos WHERE id = :id";
     try {

@@ -1,7 +1,9 @@
 <?php
-require_once "../src/funcoes-produtos.php";
+use ExemploCrudPoo\Produtos;
+require_once "../vendor/autoload.php";
 require_once "../src/funcoes-utilitarias.php";
-$listaDeProdutos = lerProdutos($conexao);
+$produtos = new Produtos;
+$listadeprodutos = $produtos->lerProdutos();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +21,7 @@ $listaDeProdutos = lerProdutos($conexao);
         <p><a href="inserir.php">
             Inserir novo produto</a></p>
         <div class="row">
-<?php foreach( $listaDeProdutos as $produto ){ ?>
+<?php foreach( $listadeprodutos as $produto ){ ?>
             <div class="col-md-6">
                 <article class="shadow p-2">
                     <h3> <?=$produto["produto"]?> </h3>
