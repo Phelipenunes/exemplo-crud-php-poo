@@ -2,6 +2,7 @@
 use ExemploCrudPoo\Fabricante;
 require_once "../vendor/autoload.php";
 $fabricante = new fabricante;
-$fabricante->excluirFabricante($conexao, $id);
+$fabricante->setId($_GET['id']);
+$fabricante->excluirFabricante();
 header("location:visualizar.php");
 
