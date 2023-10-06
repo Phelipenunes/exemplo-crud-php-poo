@@ -46,7 +46,7 @@ final class Produtos {
         return $resultado;
     }
 
-    function inserirProduto():void {
+    public function inserirProduto():void {
         $sql = "INSERT INTO produtos(
             nome, preco, quantidade, descricao, fabricantes_id
         ) VALUES(
